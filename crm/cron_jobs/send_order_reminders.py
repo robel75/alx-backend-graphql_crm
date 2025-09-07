@@ -31,7 +31,7 @@ except Exception as e:
     print(f"GraphQL query failed: {e}")
     orders = []
 
-log_file = "crm/cron_jobs/order_reminders_log.txt"
+log_file = "/tmp/order_reminders_log.txt"
 with open(log_file, "a") as f:
     timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     for order in orders:
